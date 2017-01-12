@@ -73,14 +73,9 @@ public class Screenshot extends CordovaPlugin {
         } catch (Exception e) {
         }
 
-        if (isCrosswalk) {
+       
             webView.getPluginManager().postMessage("captureXWalkBitmap", this);
-        } else {
-            View view = webView.getView();//.getRootView();
-            view.setDrawingCacheEnabled(true);
-            bitmap = Bitmap.createBitmap(view.getDrawingCache());
-            view.setDrawingCacheEnabled(false);
-        }
+       
 
         return bitmap;
     }
