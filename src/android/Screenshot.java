@@ -66,7 +66,7 @@ public class Screenshot extends CordovaPlugin {
     private Bitmap getBitmap() {
         Bitmap bitmap = null;
 
-        boolean isCrosswalk = false;
+        boolean isCrosswalk = true;
         try {
             Class.forName("org.crosswalk.engine.XWalkWebViewEngine");
             isCrosswalk = true;
